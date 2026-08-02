@@ -1,6 +1,6 @@
 import { Router } from "express";
 import authRoutes from "../modules/auth/auth.routes";
-import urlRoutes from "../modules/url/url.routes.ts";
+import urlRoutes from "../modules/url/url.routes";
 import { ApiResponse } from "../utils/apiResponse"
 
 
