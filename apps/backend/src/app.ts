@@ -5,6 +5,7 @@ import cors from "cors";
 import compression from "compression";
 import morgan from "morgan";
 import { notFound } from "./middleware/notFound";
+import {errorHandler} from "./middleware/errorHandler"
 
 export const app = express();
 
@@ -20,4 +21,5 @@ app.get("/",(req,res)=> {
     res.send("HOME API");
 });
 
+app.use(errorHandler);
 app.use(notFound);
