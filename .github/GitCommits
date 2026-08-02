@@ -1,0 +1,25 @@
+feat: initialize project
+
+feat: add prisma
+
+feat: create auth module
+
+feat: implement signup
+
+feat: implement login
+
+feat: add JWT middleware
+
+feat: create URL service
+
+feat: implement redirects
+
+feat: integrate Redis cache
+
+feat: implement analytics
+
+test: add auth tests
+
+ci: add GitHub Actions
+
+deploy: deploy to AWS
