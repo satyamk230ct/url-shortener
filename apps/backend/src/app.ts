@@ -1,8 +1,8 @@
-import express from "express"
-import router from "./routes"
+import express from "express";
+import router from "./routes";
 import helmet from "helmet";
-import cors from "cors"
-import compression from "compression"
+import cors from "cors";
+import compression from "compression";
 import morgan from "morgan";
 import { notFound } from "./middleware/notFound";
 
