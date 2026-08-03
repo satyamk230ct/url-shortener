@@ -2,14 +2,14 @@ import { Router } from "express";
 
 const router = Router();
 
-router.post("/");
+// router.post("/");
 
-router.get("/");
+// router.get("/");
 
-router.get("/:id");
+// router.get("/:id");
 
-router.patch("/:id");
+// router.patch("/:id");
 
-router.delete("/:id");
+// router.delete("/:id");
 
 export default router;
