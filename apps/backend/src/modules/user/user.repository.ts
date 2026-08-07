@@ -14,9 +14,10 @@ export class UserRepository {
         password: string;
         name: string;
         isVerified: boolean;
-    }) {
+    }) 
+    {
         return prisma.user.create({
-            data,
+            data
         });
     }
 }
