@@ -1,6 +1,7 @@
 import bcrypt from "bcrypt"
 import { AuthRepository } from "./auth.repository"
 import type { RegisterDto }  from "./auth.types"
+import { ConflictError } from "../../errors/ConflictError";
 
 export class  AuthService {
     private repository = new AuthRepository();
@@ -9,7 +10,7 @@ export class  AuthService {
         const existingUser = await this.repository.findByEmail(data.email);
 
         if(existingUser) {
-            throw new Error("Email already exist");
+            throw new ConflictError("Email already exists");
         }
 
         const hashPassword = await bcrypt.hash(data.password,10);   // 10 time hashing

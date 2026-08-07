@@ -21,5 +21,6 @@ app.get("/",(req,res)=> {
     res.send("HOME API");
 });
 
-app.use(errorHandler);
 app.use(notFound);
+
+app.use(errorHandler);
