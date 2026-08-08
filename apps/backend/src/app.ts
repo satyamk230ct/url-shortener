@@ -17,6 +17,8 @@ app.use(morgan("dev"));
 
 app.use("/api/v1", router);
 
+
+
 app.get("/",(req,res)=> {
     res.send("HOME API");
 });

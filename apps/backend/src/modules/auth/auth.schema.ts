@@ -5,3 +5,8 @@ export const registerSchema = z.object({
     email : z.email().transform((email)=>email.toLowerCase()),
     password : z.string().min(8).max(100)
 });
+
+export const loginSchema = z.object({
+    email : z.email().transform((email)=>email.toLowerCase()),
+    password : z.string().min(8).max(100)
+});

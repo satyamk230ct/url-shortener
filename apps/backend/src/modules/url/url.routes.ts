@@ -1,15 +1,23 @@
 import { Router } from "express";
+import { UrlController } from "./url.controller";
+import { validate } from "../../middleware/validate";
+import { createUrlSchema } from "./url.schema";
+import { authMiddleware } from "../../middleware/auth";
 
 const router = Router();
 
-// router.post("/");
+const controller = new UrlController();
 
-// router.get("/");
+router.post("/",
+    authMiddleware,
+    validate(createUrlSchema),
+    controller.create
+);
 
-// router.get("/:id");
-
-// router.patch("/:id");
-
-// router.delete("/:id");
+router.get(
+    "/me",
+    authMiddleware,
+    controller.me
+);
 
 export default router;

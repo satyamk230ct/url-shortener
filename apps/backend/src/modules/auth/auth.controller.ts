@@ -22,4 +22,15 @@ export class AuthController {
             });
         }
     );
+
+    login = asyncHandler(
+        async (req: Request, res: Response) => {
+            const result = await this.service.login(req.body);
+            res.json({
+                success : true,
+                message : "Login Sucessfull",
+                data : result
+            });
+        }
+    );
 }
